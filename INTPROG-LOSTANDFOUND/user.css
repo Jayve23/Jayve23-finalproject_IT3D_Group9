@@ -1,0 +1,204 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Full page height and background */
+html, body {
+    height: 100%;
+    width: 100%;
+    background: rgb(244, 244, 203);
+}
+
+/* Navbar styling */
+nav {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, rgba(255,204,0,1) 0%, rgba(6,59,58,1) 0%, rgba(11,142,88,1) 100%, rgba(255,204,0,1) 100%);
+    position: relative;
+    height: 70px;
+}
+
+nav .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #9df385;
+}
+
+/* Menu icon (hamburger) for mobile view */
+.menu-icon {
+    display: none;
+}
+
+.menu-icon i {
+    color: #fff;
+    font-size: 30px;
+}
+
+/* Admin dashboard content */
+.admin-dashboard {
+    padding: 40px;
+    color: #fff;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: calc(100vh - 70px);
+}
+
+/* Heading and welcome message */
+.admin-dashboard h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.admin-dashboard p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Logout button */
+button {
+    padding: 10px 30px;
+    background-color: rgba(11,142,88,1);
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: rgba(6,59,58,1);
+}
+
+/* Container styling */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.image {
+    width: 70%;
+    padding: 20px 0;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.info {
+    width: 30%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-left: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info p {
+    margin: 10px 0;
+}
+
+.info strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.info .description {
+    font-style: italic;
+    color: #666;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: green;
+        gap: 0;
+        overflow: hidden;
+    }
+
+    nav ul li {
+        padding: 20px;
+        padding-top: 10;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #menuList {
+        transition: all 0.5s;
+    }
+
+    /* Make menu visible when clicked */
+    #menuList.open {
+        max-height: 300px;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .image img {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .image, .info {
+        width: 100%;
+        border-left: none;
+    }
+
+    .info {
+        border-top: 1px solid #ccc;
+    }
+}
